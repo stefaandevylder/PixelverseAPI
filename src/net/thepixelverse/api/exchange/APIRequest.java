@@ -16,7 +16,7 @@ import net.thepixelverse.api.exchange.APIRequest;
 
 public class APIRequest {
     
-    private static String host = "localhost:8250"; // "srv.thepixelverse.net:8250";
+    private static String HOST_WITH_PORT = "srv.thepixelverse.net:8250";
     
     private Map<String, String> query;
     private String context;
@@ -41,13 +41,12 @@ public class APIRequest {
     }
     
     public APIResponse get() {
-	return createResponse(host);
+	return createResponse(HOST_WITH_PORT);
     }
     
     private APIResponse createResponse(String host) {
 	try {
 	    URL url = new URL("http://" + host + "/" + context + "?" + queryToString());
-	    System.out.println(url.toString());
 	    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
 	    
 	    InputStream in = urlConnection.getResponseCode() == 200 ? urlConnection.getInputStream() : urlConnection.getErrorStream();

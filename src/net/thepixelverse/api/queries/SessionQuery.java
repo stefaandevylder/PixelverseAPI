@@ -13,19 +13,19 @@ public class SessionQuery extends APIQuery {
 	return "session";
     }
     
-    public void setRequestPlayerName(String name) {
+    public void setParamName(String name) {
 	setParam("name", name);
     }
     
-    public String getRequestPlayerName() {
+    public String getParamName() {
 	return getParam("name");
     }
     
-    public void setRequestPlayerUUID(UUID uuid) {
+    public void setParamUUID(UUID uuid) {
 	setParam("uuid", uuid.toString());
     }
     
-    public UUID getRequestPlayerUUID() {
+    public UUID getParamUUID() {
 	return hasParam("uuid") ? UUID.fromString(getParam("uuid")) : null;
     }
     

@@ -7,11 +7,11 @@ public class ServerStatusQuery extends APIQuery {
 	return "server";
     }
     
-    public void setServer(String server) {
+    public void setParamServer(String server) {
 	setParam("server", server);
     }
     
-    public String getServer() {
+    public String getParamServer() {
 	return getParam("server");
     }
     

@@ -10,6 +10,10 @@ public enum ServerType {
 	this.name = name;
     }
     
+    public boolean hasStats() {
+	return this != HUB;
+    }
+    
     public String getName() {
 	return name;
     }

@@ -12,8 +12,8 @@ public class PixelverseAPI {
 	this.apiKey = key;
     }
     
-    public APIQuery createQuery(APIQuery query) {
-	return query.get(apiKey);
+    public void executeQuery(APIQuery query) {
+	query.get(apiKey);
     }
     
 }
